@@ -22,7 +22,7 @@ import { AutoCounter } from './components/timer/timer'
 const ALERT_TIME_MS = 2000
 
 // BEGIN CHANGES
-var time = "00:00:00"
+var TIME = "00:00:00"
 // END CHANGES
 
 function App() {
@@ -125,7 +125,7 @@ function App() {
 
   // BEGIN CHANGES
   if(isGameWon == isGameLost) {
-    time = new Date(counter*1000).toISOString().substr(11,8)
+    TIME = new Date(counter*1000).toISOString().substr(11,8)
   }
   // END CHANGES
   
@@ -133,7 +133,7 @@ function App() {
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
 
       {/* BEGIN CHANGES */}
-      <div> {time} </div>
+      <div> { TIME } </div>
       {/* END CHANGES */}
       
       <div className="flex w-80 mx-auto items-center mb-8">
