@@ -56,6 +56,10 @@ function App() {
 
   const [stats, setStats] = useState(() => loadStats())
 
+  // BEGIN CHANGES
+  stats.totalTime = TIME
+  // END CHANGES
+
   useEffect(() => {
     saveGameStateToLocalStorage({ guesses, solution })
   }, [guesses])

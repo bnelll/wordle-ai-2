@@ -13,7 +13,9 @@ const StatItem = ({
 }) => {
   return (
     <div className="items-center justify-center m-1 w-1/4">
-      <div className="text-3xl font-bold">{value}</div>
+      {/* CHANGED FONT TO XL FROM 2XL*/}
+      <div className="text-xl font-bold">{value}</div>
+      {/* END CHANGES */}
       <div className="text-xs">{label}</div>
     </div>
   )
@@ -26,6 +28,9 @@ export const StatBar = ({ gameStats }: Props) => {
       <StatItem label="Success rate" value={`${gameStats.successRate}%`} />
       <StatItem label="Current streak" value={gameStats.currentStreak} />
       <StatItem label="Best streak" value={gameStats.bestStreak} />
+      {/* BEGIN CHANGES */}
+      <StatItem label="Total time taken" value={gameStats.totalTime} />
+      {/* END CHANGES */}
     </div>
   )
 }
